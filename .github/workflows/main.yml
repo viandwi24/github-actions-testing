@@ -14,7 +14,7 @@ jobs:
           node-version: 12.x
       - name: Install nodejs dependencies 
         run: |
-          yarn
+          yarn install
       - name: Run Webpack Build
         run: |
           yarn production
@@ -23,7 +23,7 @@ jobs:
           git config --local user.name "viandwi24"
           git config --local user.email "fiandwi0424@gmail.com"
           git add .
-          git commit -m "[AUTO:BUILD] build from main.js"
+          git commit -m "[AUTO:BUILD] build main.js"
       - name: Push
         uses: ad-m/github-push-action@master
         with:
